@@ -1,0 +1,12 @@
+#!/usr/local/bin/python3
+
+import datetime
+currentdate = datetime.date.today()
+
+userinput = input ("What is your birthday? (mm/dd/yy) ")
+# format expected below 03/24/1964
+birthday = datetime.datetime.strptime(userinput, "%m/%d/%Y").date()
+print(birthday)
+
+days = birthday - currentdate
+print(days)
